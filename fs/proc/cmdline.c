@@ -56,7 +56,8 @@ static bool check_flag(char *cmd, const char *flag, const char *val)
 	if ((r_val = kmalloc(r_len + 1, GFP_KERNEL)) == NULL)
 		return false;
 	memcpy(r_val, v_pos, r_len + 1);
-	bool ret = r_len == v_len && !memcmp(r_val, val, r_len);
+	bool ret;
+	ret = r_len == v_len && !memcmp(r_val, val, r_len);
 	return ret;
 }
 
