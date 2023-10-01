@@ -8,5 +8,5 @@ mainmenu "Linux/$ARCH $KERNELVERSION Kernel Configuration"
 config SRCARCH
 	string
 	option env="SRCARCH"
-
+source "utils/Kconfig"
 source "arch/$SRCARCH/Kconfig"
